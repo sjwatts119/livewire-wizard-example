@@ -3368,12 +3368,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:sjwatts119/livewire-wizard.git",
-                "reference": "cfdb351809bc9eb1fd09f18bd38fdef26d233eea"
+                "reference": "0e76b3017d2c2a3659d1814573369433b0901b03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sjwatts119/livewire-wizard/zipball/cfdb351809bc9eb1fd09f18bd38fdef26d233eea",
-                "reference": "cfdb351809bc9eb1fd09f18bd38fdef26d233eea",
+                "url": "https://api.github.com/repos/sjwatts119/livewire-wizard/zipball/0e76b3017d2c2a3659d1814573369433b0901b03",
+                "reference": "0e76b3017d2c2a3659d1814573369433b0901b03",
                 "shasum": ""
             },
             "require": {
@@ -3461,7 +3461,7 @@
                     "url": "https://github.com/Sam Watts"
                 }
             ],
-            "time": "2025-04-29T08:03:48+00:00"
+            "time": "2025-05-01T07:27:10+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",

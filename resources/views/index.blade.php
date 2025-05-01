@@ -13,9 +13,9 @@
     </head>
     <body class="dark:bg-zinc-900 dark">
         <div class="max-w-screen-md mx-auto mt-16">
-            <x-wizard>
-
-            </x-wizard>
+            <x-card>
+                <livewire:example-wizard />
+            </x-card>
         </div>
     </body>
 </html>

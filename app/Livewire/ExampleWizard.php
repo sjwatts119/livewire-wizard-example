@@ -15,6 +15,14 @@ class ExampleWizard extends Wizard
                 title: 'Step 1',
                 view: view('livewire.example-wizard.step-1'),
             ),
+            WizardStep::make(
+                title: 'Step 2',
+                view: view('livewire.example-wizard.step-2'),
+            ),
+            WizardStep::make(
+                title: 'Step 3',
+                view: view('livewire.example-wizard.step-3'),
+            ),
         ];
     }
 
