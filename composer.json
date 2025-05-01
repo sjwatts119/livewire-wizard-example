@@ -11,7 +11,8 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "sjwatts119/livewire-wizard": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -75,5 +76,11 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": {
+        "livewire-wizard": {
+            "type": "vcs",
+            "url": "https://github.com/sjwatts119/livewire-wizard"
+        }
+    }
 }

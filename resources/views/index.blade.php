@@ -12,6 +12,10 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="dark:bg-zinc-900 dark">
+        <div class="max-w-screen-md mx-auto mt-16">
+            <x-wizard>
 
+            </x-wizard>
+        </div>
     </body>
 </html>
