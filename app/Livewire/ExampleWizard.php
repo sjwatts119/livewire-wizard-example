@@ -4,12 +4,24 @@ namespace App\Livewire;
 
 use App\Livewire\Forms\ExampleWizardForm;
 use Illuminate\View\View;
+use SamWatts\LivewireWizard\Exceptions\Wizard\StepDefinitionException;
+use SamWatts\LivewireWizard\Exceptions\Wizard\StepNotAuthorisedException;
 use SamWatts\LivewireWizard\Livewire\Wizard;
 use SamWatts\LivewireWizard\Wizard\WizardStep;
 
 class ExampleWizard extends Wizard
 {
     public ExampleWizardForm $form;
+
+    public function clearForm(): void
+    {
+        $this->reset([
+            'step',
+            'form.name',
+            'form.email',
+            'form.message',
+        ]);
+    }
 
     public function wizardSteps(): array
     {
@@ -31,6 +43,10 @@ class ExampleWizard extends Wizard
         ];
     }
 
+    /**
+     * @throws StepDefinitionException
+     * @throws StepNotAuthorisedException
+     */
     public function render(): View
     {
         return $this

@@ -17,4 +17,14 @@
             </ul>
         </div>
     </section>
+
+    <x-wizard.progression :previousStep="$this->previousStep()" :nextStep="$this->nextStep()">
+        <x-slot:right>
+            <x-wizard.progression.button
+                wire:click="clearForm"
+            >
+                Submit
+            </x-wizard.progression.button>
+        </x-slot:right>
+    </x-wizard.progression>
 </div>

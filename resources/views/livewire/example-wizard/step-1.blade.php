@@ -9,4 +9,5 @@
         </div>
     </section>
 
+    <x-wizard.progression :previousStep="$this->previousStep()" :nextStep="$this->nextStep()" />
 </div>
