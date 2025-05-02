@@ -1,4 +1,4 @@
-<div>
+<div class="space-y-16">
     <x-wizard.nav>
         @foreach($this->steps() as $step)
             <x-wizard.nav.item

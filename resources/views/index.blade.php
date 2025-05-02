@@ -11,7 +11,7 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="dark:bg-zinc-900 dark">
+    <body class="dark:bg-zinc-900 dark:text-zinc-100 dark">
         <div class="max-w-screen-md mx-auto mt-16">
             <x-card>
                 <livewire:example-wizard />

@@ -2,12 +2,16 @@
 
 namespace App\Livewire;
 
+use App\Livewire\Forms\ExampleWizardForm;
+use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 use SamWatts\LivewireWizard\Livewire\Wizard;
 use SamWatts\LivewireWizard\Wizard\WizardStep;
 
 class ExampleWizard extends Wizard
 {
+    public ExampleWizardForm $form;
+
     public function wizardSteps(): array
     {
         return [
@@ -18,10 +22,28 @@ class ExampleWizard extends Wizard
             WizardStep::make(
                 title: 'Step 2',
                 view: view('livewire.example-wizard.step-2'),
+                canNavigate: function () {
+                    try {
+                        $this->form->validateOnly('name');
+
+                        return true;
+                    } catch (ValidationException) {
+                        return false;
+                    }
+                },
             ),
             WizardStep::make(
                 title: 'Step 3',
                 view: view('livewire.example-wizard.step-3'),
+                canNavigate: function () {
+                    try {
+                        $this->form->validateOnly('name');
+
+                        return true;
+                    } catch (ValidationException) {
+                        return false;
+                    }
+                },
             ),
         ];
     }
