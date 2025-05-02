@@ -1,22 +1,12 @@
 <div class="space-y-8">
-    <x-wizard.nav>
-        @foreach($this->steps() as $step)
-            <x-wizard.nav.item
-                :name="$step->getTitle()"
-                :current="$this->currentStep()->is($step)"
-                :disabled="!$step->canNavigate()"
-                wire:click="navigateToStep('{{ $step->getTitle() }}')"
-            >
-                {{ $step->getTitle() }}
-            </x-wizard.nav.item>
-        @endforeach
-    </x-wizard.nav>
+    <x-wizard.nav :steps="$this->steps()" :currentStep="$this->currentStep()" />
 
     <section>
         <div class="flex flex-col gap-y-4">
-            <x-input.text name="name" placeholder="Name" wire:model.live="form.name" />
+            <x-input.text name="name" placeholder="Name" wire:model.live="form.name" required />
 
-            <x-input.text name="username" placeholder="Username" wire:model.live="form.username" />
+            <x-input.text name="email" type="email" placeholder="Email" wire:model.live="form.email" />
         </div>
     </section>
+
 </div>
