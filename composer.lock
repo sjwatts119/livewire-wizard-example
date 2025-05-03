@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98fccc2d7bb0fdfa0380e7a6cf0ba6dd",
+    "content-hash": "e20e76ab614af67711583386667ccddb",
     "packages": [
         {
             "name": "brick/math",
@@ -3364,10 +3364,10 @@
         },
         {
             "name": "sjwatts119/livewire-wizard",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:sjwatts119/livewire-wizard.git",
+                "url": "https://github.com/sjwatts119/livewire-wizard.git",
                 "reference": "5f1e7df4b8f517512c533c8eefb8258e62968f3a"
             },
             "dist": {
@@ -3390,16 +3390,15 @@
                 "pestphp/pest-plugin-arch": "^3.0",
                 "pestphp/pest-plugin-laravel": "^3.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "SamWatts\\LivewireWizard\\LivewireWizardServiceProvider"
-                    ],
                     "aliases": {
                         "LivewireWizard": "SamWatts\\LivewireWizard\\Facades\\LivewireWizard"
-                    }
+                    },
+                    "providers": [
+                        "SamWatts\\LivewireWizard\\LivewireWizardServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -3407,32 +3406,7 @@
                     "SamWatts\\LivewireWizard\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "SamWatts\\LivewireWizard\\Tests\\": "tests/",
-                    "Workbench\\App\\": "workbench/app/"
-                }
-            },
-            "scripts": {
-                "post-autoload-dump": [
-                    "@composer run prepare"
-                ],
-                "prepare": [
-                    "@php vendor/bin/testbench package:discover --ansi"
-                ],
-                "analyse": [
-                    "vendor/bin/phpstan analyse"
-                ],
-                "test": [
-                    "vendor/bin/pest"
-                ],
-                "test-coverage": [
-                    "vendor/bin/pest --coverage"
-                ],
-                "format": [
-                    "vendor/bin/pint"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3451,13 +3425,13 @@
                 "livewire-wizard"
             ],
             "support": {
-                "source": "https://github.com/sjwatts119/livewire-wizard/tree/main",
-                "issues": "https://github.com/sjwatts119/livewire-wizard/issues"
+                "issues": "https://github.com/sjwatts119/livewire-wizard/issues",
+                "source": "https://github.com/sjwatts119/livewire-wizard/tree/v1.0.0"
             },
             "funding": [
                 {
-                    "type": "github",
-                    "url": "https://github.com/Sam Watts"
+                    "url": "https://github.com/Sam Watts",
+                    "type": "github"
                 }
             ],
             "time": "2025-05-03T20:51:17+00:00"
@@ -9245,9 +9219,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "sjwatts119/livewire-wizard": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
