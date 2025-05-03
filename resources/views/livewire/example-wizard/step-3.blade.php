@@ -23,7 +23,7 @@
             <x-wizard.progression.button
                 wire:click="clearForm"
             >
-                Submit
+                Restart
             </x-wizard.progression.button>
         </x-slot:right>
     </x-wizard.progression>
