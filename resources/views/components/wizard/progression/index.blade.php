@@ -11,7 +11,7 @@
     @isset($previousStep)
         <x-wizard.progression.button
             :disabled="!$previousStep->canNavigate()"
-            wire:click="navigateToStep('{{ $previousStep->getTitle() }}')"
+            wire:click="navigateToStep('{{ $previousStep->title() }}')"
         >
             Back
         </x-wizard.progression.button>
@@ -22,7 +22,7 @@
     @isset($nextStep)
         <x-wizard.progression.button
             :disabled="!$nextStep->canNavigate()"
-            wire:click="navigateToStep('{{ $nextStep->getTitle() }}')"
+            wire:click="navigateToStep('{{ $nextStep->title() }}')"
         >
             Next
         </x-wizard.progression.button>
