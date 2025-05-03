@@ -1,7 +1,7 @@
 <div class="space-y-8">
     <x-wizard.nav :steps="$this->steps()" :currentStep="$this->currentStep()" />
 
-    <section>
+    <section class="min-h-40">
         <div class="flex flex-col gap-y-4">
             <h2 class="text-xl font-semibold">Confirm your message:</h2>
             <ul class="list-none space-y-4">

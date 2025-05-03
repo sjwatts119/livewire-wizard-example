@@ -1,7 +1,7 @@
 <div class="space-y-8">
     <x-wizard.nav :steps="$this->steps()" :currentStep="$this->currentStep()" />
 
-    <section>
+    <section class="min-h-40">
         <div class="flex flex-col gap-y-4">
             <x-input.textarea name="message" placeholder="Your Message" wire:model.live="form.message" required />
         </div>
